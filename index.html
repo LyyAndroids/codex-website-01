@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#254c3c">
+  <meta name="description" content="山海漫游，发现国内旅行的另一种节奏。探索大理、丽江、桂林等目的地，浏览精选路线与实用旅行攻略。">
+  <title>山海漫游 · 把日子，交给山海</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/images/guilin.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#destinations">跳到目的地</a>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.6 5.4L8 16l2.6-5.4L16 8Z"/></symbol>
+      <symbol id="icon-mountain" viewBox="0 0 24 24"><path d="m2 20 8-15 9 15H2Zm12-9 2-4 7 13h-4M7 11l3 2 3-2"/></symbol>
+      <symbol id="icon-wave" viewBox="0 0 24 24"><path d="M2 8c3-5 7 5 10 0s7 5 10 0M2 13c3-5 7 5 10 0s7 5 10 0M2 18c3-5 7 5 10 0s7 5 10 0"/></symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24"><path d="m2 9 10-6 10 6H2Zm1 12h18M5 11v7m7-7v7m7-7v7"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 5v15M3 4c3-1 6-1 9 1 3-2 6-2 9-1v15c-3-1-6-1-9 1-3-2-6-2-9-1V4Z"/></symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#home" aria-label="山海漫游首页">
+        <img src="assets/favicon.svg" alt="" width="42" height="42">
+        <span class="brand-type"><strong>山海漫游</strong><span>SHANHAI WANDER</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="打开导航菜单"><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="主导航">
+        <a class="nav-link active" href="#home">首页</a>
+        <a class="nav-link" href="#destinations">探索目的地</a>
+        <a class="nav-link" href="#routes">精选路线</a>
+        <a class="nav-link" href="#guides">旅行攻略</a>
+      </nav>
+      <a class="header-explore" href="#destinations"><svg class="icon"><use href="#icon-compass"/></svg>出发去看看</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-media media-frame"><img src="assets/images/guilin.jpg" alt="桂林漓江上的游船与层叠青山" width="1920" height="1053" fetchpriority="high"><span class="image-fallback" hidden>山水照片暂时无法显示</span></div>
+      <div class="hero-shade"></div>
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <span class="hero-eyebrow"><span class="eyebrow-rule"></span> 山海之间，自有答案</span>
+          <h1 id="hero-title">把日子，<br>交给<span>山海。</span></h1>
+          <p>走进山野，听见海风。<br class="mobile-only">在熟悉的中国，遇见不一样的自己。</p>
+          <form class="search-form" role="search" aria-label="搜索旅游目的地">
+            <svg class="icon search-pin" aria-hidden="true"><use href="#icon-pin"/></svg>
+            <div class="search-field"><label for="destination-search">你的下一站，想去哪里？</label><input id="destination-search" type="search" placeholder="搜索目的地、地区或旅行关键词" maxlength="100" autocomplete="off"></div>
+            <button class="search-submit" type="submit"><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg><span>探索目的地</span></button>
+          </form>
+          <div class="hero-suggestions"><span>旅行灵感</span><button type="button" data-search="大理">大理的慢时光</button><button type="button" data-search="草原">去草原吹风</button><button type="button" data-search="海岸">向着大海出发</button></div>
+        </div>
+        <div class="hero-location"><svg class="icon" aria-hidden="true"><use href="#icon-pin"/></svg><div><span>镜头里的中国</span><strong>广西 · 桂林</strong></div></div>
+      </div>
+      <div class="hero-bottom"><span>LESS HURRY. MORE WONDER.</span><span>山川湖海，慢慢相见</span></div>
+    </section>
+
+    <section class="destinations-section section container" id="destinations" aria-labelledby="destinations-title">
+      <div class="section-heading"><div><span class="eyebrow">FIND YOUR NEXT CHAPTER</span><h2 id="destinations-title">下一站，去哪儿？</h2><p>每一种风景，都有值得停留的理由。</p></div><button class="text-button reset-all" type="button">查看全部目的地<svg class="icon" aria-hidden="true"><use href="#icon-compass"/></svg></button></div>
+      <div class="destination-toolbar"><div class="filter-group" role="group" aria-label="目的地分类">
+        <button type="button" class="filter-button selected" data-category="全部" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#icon-compass"/></svg>全部</button>
+        <button type="button" class="filter-button" data-category="山野" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-mountain"/></svg>山野</button>
+        <button type="button" class="filter-button" data-category="海滨" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-wave"/></svg>海滨</button>
+        <button type="button" class="filter-button" data-category="人文" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-building"/></svg>人文</button>
+      </div><span class="result-count" id="result-count" role="status" aria-live="polite">发现 8 个目的地</span></div>
+      <div class="search-summary" id="search-summary" hidden><span></span><button type="button" class="reset-all">清空条件</button></div>
+      <div class="destination-grid" id="destination-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><svg class="icon" aria-hidden="true"><use href="#icon-compass"/></svg><h3>还没找到这一站</h3><p>试试「云南」「雪山」或「海岸」，也可以清空条件重新看看。</p><button type="button" class="button-green reset-all">清空条件</button></div>
+    </section>
+
+    <section class="routes-section section" id="routes" aria-labelledby="routes-title"><div class="container">
+      <div class="section-heading"><div><span class="eyebrow">A JOURNEY, AT YOUR PACE</span><h2 id="routes-title">好风景，串成一段好旅程</h2><p>精选 4 条旅行路线，留一点时间，给路上的惊喜。</p></div><span class="section-note"><svg class="icon" aria-hidden="true"><use href="#icon-mountain"/></svg>不赶路，好好旅行</span></div>
+      <div class="route-grid" id="route-grid"></div>
+      <p class="route-footnote">路线为自主旅行灵感，天数可按你的节奏调整。</p>
+    </div></section>
+
+    <section class="guides-section section container" id="guides" aria-labelledby="guides-title">
+      <div class="section-heading"><div><span class="eyebrow">NOTES FROM THE ROAD</span><h2 id="guides-title">出发之前，读一点旅行</h2><p>关于准备，关于慢游，也关于和世界相处的方式。</p></div><span class="section-note"><svg class="icon" aria-hidden="true"><use href="#icon-book"/></svg>给旅途一点灵感</span></div>
+      <div class="guide-layout" id="guide-layout"></div>
+    </section>
+
+    <section class="closing-note container" aria-label="旅行寄语"><span class="closing-label">去远方，也走近自己</span><p>世界很大，<em>不妨慢慢走。</em></p><a class="button-green" href="#destinations"><svg class="icon" aria-hidden="true"><use href="#icon-compass"/></svg>找到我的下一站</a></section>
+  </main>
+
+  <footer class="site-footer"><div class="container">
+    <div class="footer-main"><div><a class="brand footer-brand" href="#home"><img src="assets/favicon.svg" alt="" width="38" height="38"><span class="brand-type"><strong>山海漫游</strong><span>SHANHAI WANDER</span></span></a><p>把日子，交给山海。把旅行，交给自己。</p></div><nav aria-label="页脚导航"><a href="#destinations">探索目的地</a><a href="#routes">精选路线</a><a href="#guides">旅行攻略</a></nav></div>
+    <div class="footer-bottom"><span>© 2026 山海漫游 · 慢慢发现中国</span><span>旅行内容为静态参考，出行安排以当地官方信息为准。</span><button type="button" class="credits-button">图片来源与许可</button></div>
+  </div></footer>
+
+  <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-scroll"><button class="dialog-close" type="button" aria-label="关闭详情" autofocus><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></button><div id="detail-content"></div></div></dialog>
+  <noscript><div class="noscript-note">请启用 JavaScript，以使用目的地搜索、筛选和详情浏览。</div></noscript>
+</body>
+</html>
